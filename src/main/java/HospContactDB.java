@@ -13,8 +13,8 @@ public class HospContactDB {
         pat.setBedPhoneNum(num);
         personList.add(pat);
     }
-    public void messageAll(String msg){
 
+    public void messageAll(String msg){
         for(Person person:personList){
             System.out.println(person.getClass().getSimpleName());
             person.contact(msg);

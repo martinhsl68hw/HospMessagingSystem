@@ -10,7 +10,7 @@ public class Doctor extends Person {
 
     public void setPagerNum(String pagerNum) {
         // Code to check pagerNum is a number only
-       contactNum=pagerNum;
+        contactNum=pagerNum;
     }
 
     public void contact(String msg){
