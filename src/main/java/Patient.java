@@ -8,7 +8,8 @@ public class Patient extends Person {
     }
 
     public void setBedPhoneNum(String bedPhoneNum) {
-        contactNum=bedPhoneNum;
+        // Remove any possible non-numbers in the bed phone number  
+        contactNum = bedPhoneNum.replaceAll("[^\\d]", "");
     }
     public void contact(String msg){
         // Calls the bedphone API

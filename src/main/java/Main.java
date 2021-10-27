@@ -3,7 +3,7 @@ public class Main {
         HospContactDB hdb=new HospContactDB();
         hdb.addDoctor("Martin Holloway","78668898");
         hdb.addDoctor("Jeff Lynne","9798");
-        hdb.addPatient("Bill Murray", "56789734");
+        hdb.addPatient("Bill Murray", "567werwe89734");
 
         hdb.messageAll("Emergency - clear the hospital");
 
