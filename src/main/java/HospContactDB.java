@@ -16,7 +16,6 @@ public class HospContactDB {
 
     public void messageAll(String msg){
         for(Person person:personList){
-            System.out.println(person.getClass().getSimpleName());
             person.contact(msg);
         }
     }
