@@ -1,3 +1,5 @@
+package DBEntities;
+
 public class Doctor extends Person {
 
     public Doctor(String name){
