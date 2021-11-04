@@ -3,6 +3,9 @@ package DBEntities;
 import DBEntities.Interfaces.Contactable;
 import DBEntities.Interfaces.Locatable;
 
+
+
+
 public class UltrasoundScanner extends Scanner implements Contactable, Locatable {
     public UltrasoundScanner(String IDnum){
         super(IDnum);
@@ -15,6 +18,6 @@ public class UltrasoundScanner extends Scanner implements Contactable, Locatable
 
     @Override
     public String whereAmI() {
-        return "US DBEntities.Scanner "+IDnum+" is in ward 5";
+        return "US Scanner "+IDnum+" is in ward 5";
     }
 }

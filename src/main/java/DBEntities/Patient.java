@@ -3,6 +3,7 @@ package DBEntities;
 import DBEntities.Interfaces.Locatable;
 
 public class Patient extends Person implements Locatable {
+    public static int value;
     public Patient(String name){
         super(name);
     }
@@ -17,12 +18,16 @@ public class Patient extends Person implements Locatable {
     }
     public void contact(String msg){
         // Calls the bedphone API
-        System.out.println("Calling DBEntities.Patient "+name+" on "+contactNum+" Message:"+msg);
+        System.out.println("Calling Patient "+name+" on "+contactNum+" Message:"+msg);
     }
-
-
     @Override
     public String whereAmI() {
-        return name+" is in Ward 15";
+        // Returns name of the Patient plus their ward
+        return name+" is in Ward 15"
+                ;
     }
+    public static String getThisClass(){
+        return "Patient";
+    }
+
 }
