@@ -3,7 +3,7 @@ package DBEntities;
 import DBEntities.Interfaces.Locatable;
 
 public class Patient extends Person implements Locatable {
-    public static int value;
+
     public Patient(String name){
         super(name);
     }
@@ -25,9 +25,6 @@ public class Patient extends Person implements Locatable {
         // Returns name of the Patient plus their ward
         return name+" is in Ward 15"
                 ;
-    }
-    public static String getThisClass(){
-        return "Patient";
     }
 
 }
