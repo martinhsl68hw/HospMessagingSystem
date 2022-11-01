@@ -2,10 +2,12 @@ package DBEntities;
 
 import DBEntities.Interfaces.Locatable;
 
+// This class represents a Patient. Patients must be locatable and contatable
 public class Patient extends Person implements Locatable {
-
-    public Patient(String name){
+    private String ward;
+    public Patient(String name, String ward){
         super(name);
+        this.ward=ward;
     }
 
     public String getBedPhoneNum() {
@@ -23,8 +25,7 @@ public class Patient extends Person implements Locatable {
     @Override
     public String whereAmI() {
         // Returns name of the Patient plus their ward
-        return name+" is in Ward 15"
-                ;
+        return name+" is in Ward "+ward;
     }
 
 }

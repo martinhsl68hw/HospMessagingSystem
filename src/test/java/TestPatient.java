@@ -6,18 +6,20 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+// A class to test the Patient class Contactable implementation
 public class TestPatient {
     Patient pat;
-    String name=new String("Martin Holloway");
+    String name="Martin Holloway";
+    String ward="London";
 
     @BeforeEach
     public void setUp(){
-        pat=new Patient(name);
+        pat=new Patient(name,ward);
     }
     @Test
     public void testWhereAmI(){
         String loc=pat.whereAmI();
-        assertEquals(name+" is in Ward 15",loc);
+        assertEquals(name+" is in Ward "+ward,loc);
     }
     @Test public void testContact(){
         String msg=new String("Test Message");
@@ -33,7 +35,7 @@ public class TestPatient {
         pat.contact(msg);
         // Restore System.out
         System.setOut(tempStore);
-
+        // Check that the correct message is sent to this patient
         assertEquals("Calling Patient "+name+" on 12345678 Message:"+msg,baos.toString().trim());
 
 

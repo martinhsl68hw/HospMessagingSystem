@@ -4,11 +4,13 @@ import DBEntities.Interfaces.Contactable;
 import DBEntities.Interfaces.Locatable;
 
 
-
+// This class represents an Ultrasound scanner. It must be locatable and contactable
 
 public class UltrasoundScanner extends Scanner implements Contactable, Locatable {
-    public UltrasoundScanner(String IDnum){
+    private String ward;
+    public UltrasoundScanner(String IDnum, String ward){
         super(IDnum);
+        this.ward=ward;
     }
 
     @Override
@@ -18,6 +20,6 @@ public class UltrasoundScanner extends Scanner implements Contactable, Locatable
 
     @Override
     public String whereAmI() {
-        return "US Scanner "+IDnum+" is in ward 5";
+        return "US Scanner "+IDnum+" is in ward "+ward;
     }
 }
